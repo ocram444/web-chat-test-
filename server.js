@@ -56,21 +56,21 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './dist/index.html'));
 });
 
-//test for getting the data from the front end
+
+//server side:
+//get data from the front end, alter it, and send it back
 app.post('/test', (req, res) => {
     const messageIn = req.body;
+    console.log(req);
     console.log('test POST server side - messageIn: ' + messageIn);
     //messageOut = testFunction(messageIn);
-    /*for testing*/ messageOut = messageIn + 'test-123';
+    let messageOut = messageIn + '-test-123'; /*for testing*/
+    //stringify the messageOut
+    messageOut = JSON.stringify(messageOut);
+    console.log('test POST server side - messageOut: ' + messageOut);
+    res.send(messageOut);
 });
 
-//test for getting the data to the front end
-app.get('/test', (req, res) => {
-    console.log('test GET server side - messageOut: ' + messageOut);
-    res.json({
-      'messageOut': messageOut
-    })
-});
 
 //server port
 app.listen(5000, () => {
