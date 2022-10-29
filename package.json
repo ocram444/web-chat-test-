@@ -1,0 +1,73 @@
+{
+  
+  "name": "ai-chat-bot-on-the-web",
+  
+  "private": true,
+  
+  "version": "0.0.0",
+  
+  "type": "commonjs",
+  
+  "scripts": {
+  
+    
+  "dev": "vite",
+  
+    
+  "build": "vite build",
+  
+    
+  "preview": "vite preview",
+  
+    
+  "start": "nodemon server.js",
+  
+    
+  "devStart": "nodemon server.js"
+  
+  },
+  
+  "dependencies": {
+  
+    
+  "express": "^4.18.2",
+  
+    
+  "http": "^0.0.1-security",
+  
+    
+  "openai": "^3.0.1",
+  
+    
+  "path": "^0.12.7",
+  
+    
+  "react": "^18.2.0",
+  
+    
+  "react-dom": "^18.2.0",
+  
+    
+  "request": "^2.88.2"
+  
+  },
+  
+  "devDependencies": {
+  
+    
+  "@types/react": "^18.0.22",
+  
+    
+  "@types/react-dom": "^18.0.7",
+  
+    
+  "@vitejs/plugin-react": "^2.2.0",
+  
+    
+  "nodemon": "^2.0.20",
+  
+    
+  "vite": "^3.2.1"
+  
+  }
+}
