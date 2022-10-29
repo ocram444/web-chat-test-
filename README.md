@@ -13,6 +13,6 @@
 8. the server should be online on http://localhost:5000/
 
 9. if you do any changes on the server.js the server will restart automatically
-10. if you do any changes on the front end you will need to close the server, run 'npm run build' and restart the server with 'npm run devStart'
+10. if you do any changes on the front end (src/App.jsx) you will need to close the server, run 'npm run build' and restart the server with 'npm run devStart'
 
 thanks for your help.
