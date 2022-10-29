@@ -22,29 +22,19 @@ function App() {
 
   //Front end side:
 
-  //create a function that sends the message to the server, then waits a bit and GETs the response.
-  const sendToServer = (message) => {
+  //send the message to the server, and get the response back and log it to the console
+  const sendToServer = async (message) => {
     console.log('about to call test POST - with message: ' + message)
     //send the message to the server
-    fetch('http://localhost:5000/test', {
+    const request = await fetch('http://localhost:5000/test', {
       method: 'POST',
-      data: JSON.stringify(message)
+      body: JSON.stringify({ myMessage: message})
     })
-    //wait 10 seconds
-    setTimeout(() => {
-      //call the getResponse function
-      getResponse();
-    }, 10000)
+    const response = await request.json()
+    console.log('test POST client side - response gotten: ' + response);
   }
-  //create a function that GETs the response from the server, then calls the addResponseToConversation function.
-  const getResponse = () => {
-    const response = fetch('http://localhost:5000/test', {
-      method: 'GET'
-      })
-    //console log the response to check it's working
-    console.log('test GET client side - response gotten: ' + response);
-    //addResponseToConversation(response)
-  }
+
+
 
 
 
